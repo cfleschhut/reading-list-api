@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'main#index'
 
-  resources :books, only: [:index, :show, :create]
+  resources :books, only: [:index, :show, :create, :destroy]
   resources :finished_books
 end
