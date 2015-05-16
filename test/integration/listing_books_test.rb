@@ -23,4 +23,13 @@ class ListingBooksTest < ActionDispatch::IntegrationTest
 
     assert_equal 1, json(response.body).size
   end
+
+  test "returns book by id" do
+    book = Book.first
+    get "/books/#{book.id}"
+
+    assert_equal 200, response.status
+    book_response = json(response.body)
+    assert_equal book.title, book_response[:title]
+  end
 end
