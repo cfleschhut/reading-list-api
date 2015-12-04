@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   resources :books, only: [:index, :show, :create, :destroy]
   resources :finished_books
+
+  resources :genres
 end
