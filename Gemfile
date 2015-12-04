@@ -7,6 +7,7 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'byebug'
